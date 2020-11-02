@@ -3,12 +3,13 @@ import time, sys
 import os
 from os import system, name
 
-# The Typewriter Effect
+
+# Writing Choice For Typewriter Effect
 def write(str):
   for letter in str:
     sys.stdout.write(letter)
     sys.stdout.flush()
-    time.sleep(0.01)
+    time.sleep(0.03)
 
 # A clear function for windows and linux using os
 def clear():
@@ -140,8 +141,8 @@ def path_1():
     ██▓▓▓▓▓▓▒▒▒▒▒▒▒▒░░░░░░░░░░▒▒░░▒▒░░░░  ░░░░░░░░░░░░░░                        ░░              ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒░░░░▒▒▒▒▒▒▒▒▒▒
     ██▓▓▓▓▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░  ░░░░░░░░░░░░                          ░░      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒
     """)
+    clear()
     path_1_torch()
-    print("see a river of plastics leading to something.")
   elif torch_or_lighter.strip().lower() == "lighter":
     print("""
     ████████████████████████▓▓████████████████████████████
@@ -177,12 +178,88 @@ def path_1():
     ████████████▓▓▓▓▒▒▓▓▒▒▓▓████████████▓▓██▓▓██▒▒▒▒▒▒████
     """)
     print('burn plastics that begin burning the water')
+    clear()
     path_1_lighter()
   else:
     clear()
     print("Sorry, you pressed an invalid value. Try again.\n")
     path_1()
 
+def path_1_torch():
+  clear()
+  print("""
+    ▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▓▓▓▓▓▓▓▓▒▒▓▓▒▒▒▒▓▓▓▓▓▓▓▓▓▓
+  ▒▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▓▓▒▒▒▒▒▒▓▓▓▓▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▓
+  ▓▓▒▒▓▓▓▓▒▒▒▒▒▒▒▒▓▓▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓
+  ▓▓▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓    
+  ▓▓▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓    
+  ▒▒▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▒▒▓▓▒▒▒▒▒▒▒▒  ░░▒▒░░    ▒▒    
+    ▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▓▓▓▓▓▓▒▒▓▓▓▓                    
+    ▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▓▓▓▓▓▓▒▒▒▒▓▓                      
+    ▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▓▓▓▓▓▓▒▒▓▓                        
+    ▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒▒▒▓▓▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒                  ░░    
+    ▒▒▓▓▓▓▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▒▒▓▓▓▓▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒                  ░░    
+    ▒▒▓▓▓▓▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▒▒▓▓▒▒▒▒▓▓▓▓▒▒▓▓▓▓▓▓                          
+    ▒▒▓▓▓▓▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                          
+    ░░▓▓▓▓▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒    ▓▓▓▓                    ░░    
+      ▓▓▓▓▒▒▒▒▒▒▓▓▒▒▒▒▓▓▓▓▓▓▒▒▒▒▓▓▓▓      ▓▓▒▒                    ▒▒    
+      ▒▒▓▓▓▓▓▓▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▓▓░░    ▓▓██▒▒                          
+      ░░▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▓▓▓▓      ░░  ▓▓                          
+        ▓▓▓▓▓▓▓▓▒▒      ▓▓▓▓▒▒▓▓▒▒          ▓▓                          
+        ▒▒██▓▓▓▓        ░░▓▓▓▓▓▓░░                                      
+        ▒▒██▓▓▓▓          ▓▓▓▓▓▓                                        
+        ▒▒████▓▓          ▒▒▓▓▒▒                                        
+        ▒▒▓▓██▒▒          ▒▒▓▓░░                        ▒▒              
+        ░░▒▒▓▓▓▓          ▒▒▓▓                          ░░              
+              ▓▓          ▒▒▓▓                                          
+              ▓▓            ▓▓                          ░░              
+              ▓▓            ▓▓                                          
+              ▒▒                          ░░                            
+              ▓▓                                                        
+""")
+  write("You turn you light, it flashes on and off. You catch a glimpse of red blood painting the cave walls red.\n")
+  write("Another flash and you see a swamp of dead fish in their own blood surrounded by plastics.\n")
+  write("You think about why the world had to create such things, it makes life easier, but were they necessary?\n")
+  write("You look at your torch and it finally turns on without flashing, you see a bloody path to the left and clean to the right.\n")
+  write("Which do you choose?\n")
+  left_or_right = input()
+  if left_or_right.strip().lower() == "left":
+    clear()
+    torch_plastic_fight()
+  elif left_or_right.strip().lower() == "right":
+    clear()
+    torch_mother_nature()
+  elif left_or_right == "lol no im going straight":
+    clear()
+    print("Easter Egg")
+  else:
+    clear()
+    print("Sorry, that was an invalid answer. Try Again.")
+    path_1_torch()
+
+def torch_mother_nature():
+  print("You talk with mother nature ending")
+
+def torch_plastic_fight():
+  print("You fight plastic, you can win or lose")
+
+def path_1_lighter():
+  print("plastic begins burning, choice to escape smell or follow smell")
+
+def lighter_escape():
+  print("try to escape cave but actually gets crushed by wave of plastic end")
+
+def lighter_follow():
+  print("follow smell and see a area of dead sea animals. Choice to examine a penguin, seagull and seal")
+
+def penguin():
+  print("dead penguin")
+
+def seagull():
+  print("dead seagull")
+
+def seal():
+  print("dead seal")
 
 # This is the intro to the game which includes it's first choice
 def play_game():
@@ -298,5 +375,5 @@ def main_menu():
     print("Sorry, but you entered an invalid choice \n              Try Again.".upper())
     main_menu()
 
-# The call for the main menu function so taht the game can begin.
+# The call for the main menu function so that the game can begin.
 main_menu()
