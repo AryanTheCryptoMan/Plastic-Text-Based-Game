@@ -113,7 +113,6 @@ def path_1():
     path_1()
 
 def path_1_torch():
-  clear()
   print("""
     ▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▓▓▓▓▓▓▓▓▒▒▓▓▒▒▒▒▓▓▓▓▓▓▓▓▓▓
   ▒▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▓▓▒▒▒▒▒▒▓▓▓▓▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▓
@@ -196,10 +195,36 @@ def torch_mother_nature():
   write("I HAVE SEEN WHAT YOU PEOPLE HAVE BEEN DOING TO ME?\n")
   write("WHAT IS YOUR NAME?\n")
   name = input().strip()
-  write(name.upper() + ", WHY HAVE YOU BEEN TRASHING MY PLANET?\n")
-  write("WHAT DID I EVER DO TO YOU?\n")
-  write("THE WORLD WILL BURN FOR THIS, MARK MY WORDS.\n")
-  sys.exit
+  write(name.upper() + ", WHY HAVE YOU BEEN TRASHING MY OCEANS?\n")
+  write("I WILL GIVE YOU A SECOND CHANCE IF YOU CAN ANSWER ME A COUPLE QUESTIONS.\n")
+  input("Press Enter to continue...")
+  clear()
+  write("FIRST YOU HAVE TO ANSWER ME THESE RIDDLES THREE, SO THAT ANOTHER DAY YOU MAY SEE.")
+  play_quiz(questions)
+  
+class Quiz: 
+  def __init__(self, prompt, answer):
+    self.prompt = prompt
+    self.answer = answer
+
+  qs = ["How many pieces of plastic are in the Ocean?\nA) 4.25 trillion\nB) 6.5 trillion\nC) 5.25 trillion",
+  "How many sea animals die from plastic pollution?\nA) 1 million\nB) 100 thousand\nC) 10 million",
+  "How many sea turtles died last year from plastic pollution in the ocean?\nA) 100\nB) 1,000\nC) 10,000"]
+
+  questions = [
+    Quiz(qs[0], "c"),
+    Quiz(qs[1], "b"),
+    Quiz(qs[2], "b")
+  ]
+
+def play_quiz(questions):
+  score = 0
+  for question in questions:
+    answer = input(question.prompt)
+    if answer == question.answer:
+      score += 1
+  print(score)
+
 
 def torch_plastic_fight():
   print("""
@@ -329,6 +354,7 @@ def fight_2_choice():
     fight_pipe()
 
 def fight_scissors():
+  clear()
   print("""
                               ██████      
                                ████▓▓██      
@@ -356,11 +382,11 @@ def fight_scissors():
         ██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ▒▒████        
             ███████████████████ ███ 
   """)
-  write("You defeated the plastic bag.")
-  write("Trash spills out from within as the evil life it had seeps out.")
-  write("A split through the middle.")
-  write("You decide to pick the rubbish up and throw it in a nearby bin outside the cave.")
-  write("Well that was a weird day.")
+  write("You defeated the plastic bag.\n")
+  write("Trash spills out from within as the evil life it had seeps out.\n")
+  write("A split through the middle.\n")
+  write("You decide to pick the rubbish up and throw it in a nearby bin outside the cave.\n")
+  write("Well that was a weird day.\n")
   sys.exit
 
 def fight_syringe():
@@ -391,11 +417,11 @@ def fight_syringe():
         ██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████        
             ██████████████████████ 
   """)
-  write("Trash spilling out from the holes made by the syringe.")
-  write("You didn't know when to stop so you kept on stabbing.")
-  write("The bag then collapses.")
-  write("What a day. You fought a plastic bag.")
-  write("Who's stupid idea was to add this to this world.")
+  write("Trash spilling out from the holes made by the syringe.\n")
+  write("You didn't know when to stop so you kept on stabbing.\n")
+  write("The bag then collapses.\n")
+  write("What a day. You fought a plastic bag.\n")
+  write("Who's stupid idea was to add this to this world.\n")
   sys.exit
 
 def path_1_lighter():
@@ -515,13 +541,13 @@ def lighter_follow():
   write("You see a trail of plastic can holders, plastic bags and plastic bottles.\n")
   write("Which do you choose?\n")
   plastic_choice =  input()
-  if plastic_choice().strip().lower() == "plasticcanholders":
+  if plastic_choice().strip().lower() == "plastic can holders":
     clear()
     penguin()
-  elif plastic_choice().strip().lower() == "plasticbags":
+  elif plastic_choice().strip().lower() == "plastic bags":
     clear()
     seagull()
-  elif plastic_choice().strip().lower() == "plasticbottles":
+  elif plastic_choice().strip().lower() == "plastic bottles":
     clear()
     seal()
   else:
@@ -530,7 +556,6 @@ def lighter_follow():
     lighter_follow()
 
 def penguin():
-  clear()
   print("\n\n\n\n\n\n\n\n\n")
   write("Every year, so many penguins die from being choked by a plastic can holder.\n")
   write("They wrap around an innocent penguins neck until they stop breathing.\n")
@@ -540,7 +565,6 @@ def penguin():
   the_final_choice()
 
 def seagull():
-  clear()
   print("\n\n\n\n\n\n\n\n\n")
   write("Every year, so many seagulls die from plastic bags stopping their air flow.\n")
   write("They think that the plastic bags are food, but that gets caught in their throat.\n")
@@ -549,7 +573,6 @@ def seagull():
   the_final_choice()
 
 def seal():
-  clear()
   print("\n\n\n\n\n\n\n\n\n")
   write("Every year, so many seals die from consuming the remnants of plastic bottles.\n")
   write("The shards are eaten by the seal and they begin to intoxicate its body.\n")
@@ -558,14 +581,14 @@ def seal():
   the_final_choice()
 
 def the_final_choice():
-  helping = input("\n\nAre you willing to help the world to get rid of unnecessary plastics?")
+  helping = input("\n\nAre you willing to help the world to get rid of unnecessary plastics?\n")
   if helping.strip().lower() == "yes":
     clear()
-    write("Good job, go out there and save the world!")
+    write("Good job, go out there and save the world!\n")
     sys.exit
   elif helping.strip().lower() == "no":
     clear()
-    write("Well, feels bad. The world really need your help.")
+    write("Well, feels bad. The world really need your help.\n")
     sys.exit
   else:
     clear()
