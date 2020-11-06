@@ -25,7 +25,7 @@ def how_to_play():
   print("""There may be choices like: (There is a cave in front of you, exploring it could continue 
   your journey but this might be a good time to give up. What do you do?)
   You need to look at key words like 'explore' and 'give up'. Then type them into the game.\n""")
-  menu_choice = input("Press E to Exit to the main menu.")
+  menu_choice = input("Press E to Exit to the main menu.\n")
   if menu_choice.lower().strip() == "e":
     clear()
     main_menu()
@@ -561,14 +561,19 @@ def lighter_follow():
   write("They pile together in a tombstone-like shape that reaches saddening heights.\n")
   write("You see a trail of plastic can holders, plastic bags and plastic bottles.\n")
   write("Which do you choose?\n")
-  plastic_choice =  input()
-  if plastic_choice().strip().lower() == "plastic can holders":
+  plastic_can_holders = ["plastic can holders", "plasticcanholders", "plastic canholders", "plasticcan holders", 
+  "can", "cans", "can holders", "canholders", "canholder", "can holder", "plastic can holders ", "plasticcanholders ",
+   "plastic canholders "]
+  plastic_bags = ["plastic bags", "plasticbags", "bag", "bags"]
+  plastic_bottles = ["plastic bottles", "plasticbottles", "bottle", "bottles"]
+  plastic_choice = input()
+  if plastic_choice.lower().strip() == plastic_can_holders or plastic_choice in plastic_can_holders:
     clear()
     penguin()
-  elif plastic_choice().strip().lower() == "plastic bags":
+  elif plastic_choice.lower().strip() == plastic_bags or plastic_choice in plastic_bags:
     clear()
     seagull()
-  elif plastic_choice().strip().lower() == "plastic bottles":
+  elif plastic_choice.lower().strip() == plastic_bottles or plastic_choice in plastic_bottles:
     clear()
     seal()
   else:
