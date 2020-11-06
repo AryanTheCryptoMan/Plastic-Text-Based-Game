@@ -112,6 +112,7 @@ def path_1():
     print("SORRY, THAT WAS AN INVALID ANSWER. TRY AGAIN.\n")
     path_1()
 
+# Path if you choose to take the torch out of your bag
 def path_1_torch():
   print("""
     ▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▓▓▓▓▓▓▓▓▒▒▓▓▒▒▒▒▓▓▓▓▓▓▓▓▓▓
@@ -163,6 +164,7 @@ def path_1_torch():
     print("SORRY, THAT WAS AN INVALID ANSWER. TRY AGAIN.\n")
     path_1_torch()
 
+# Torch path that leads you to talk to the earth aka mother nature, go right with the clean path
 def torch_mother_nature():
   print("""
                 ▓▓▒▒▒▒██▒▒▒▒▒▒▒▒              
@@ -202,6 +204,7 @@ def torch_mother_nature():
   write("FIRST YOU HAVE TO ANSWER ME THESE RIDDLES THREE, SO THAT ANOTHER DAY YOU MAY SEE.")
   play_quiz(questions)
   
+#This is for the quiz that the earth gives you to survive
 class Quiz: 
   def __init__(self, prompt, answer):
     self.prompt = prompt
@@ -217,6 +220,7 @@ questions = [
   Quiz(qs[2], "b")
 ]
 
+#What happens when you play the quiz including scoring
 def play_quiz(questions):
   score = 0
   for question in questions:
@@ -236,7 +240,7 @@ def play_quiz(questions):
     write("YOU GET TO SEE ANOTHER DAY.\nI HOPE YOU USE IT WELL.")
     sys.exit
 
-
+# if you pick the torch but decide to go left through the bloody path
 def torch_plastic_fight():
   print("""
           ████                    ██████      
@@ -347,7 +351,8 @@ def fight_pipe():
   write("I. DARE. YOU.\n")
   write("A pair of scissors and syringe fall out.\n")
   fight_2_choice()
-  
+
+#The choices for the second stage of the fight
 def fight_2_choice():
   write("Do you use the scissors or the syringe?\n")
   fight_2 = input()
@@ -364,6 +369,7 @@ def fight_2_choice():
     print("SORRY, THAT WAS AN INVALID ANSWER. TRY AGAIN.\n")
     fight_pipe()
 
+#The scissors path of teh second stage
 def fight_scissors():
   clear()
   print("""
@@ -400,6 +406,7 @@ def fight_scissors():
   write("Well that was a weird day.\n")
   sys.exit
 
+#The syringe path of the second stage of the fight
 def fight_syringe():
   print("""
           ████                    ██████      
@@ -435,6 +442,7 @@ def fight_syringe():
   write("Who's stupid idea was to add this to this world.\n")
   sys.exit
 
+#if you choose the lighter
 def path_1_lighter():
   print("""
   █████████████████████████████████▓▓██████████████████
@@ -485,6 +493,7 @@ def path_1_lighter():
     print("SORRY, THAT WAS AN INVALID ANSWER. TRY AGAIN.\n")
     path_1_lighter()
 
+#If you choose the lighter and escape
 def lighter_escape():
   print("""                                                     
                                           ████▓▓▓▓▓▓▓▓▓▓▓▓▓▓██      
@@ -510,6 +519,7 @@ def lighter_escape():
   write("A wave to end the cave, maybe exploring would've been a better plan.\n")
   sys.exit
 
+#if you choose the lighter and decide to follow the smell
 def lighter_follow():
   print("""
                               ▒▒▓▓▓▓████▓▓▓▓                            
@@ -566,6 +576,7 @@ def lighter_follow():
     print("SORRY, THAT WAS AN INVALID ANSWER. TRY AGAIN.\n")
     lighter_follow()
 
+#penguin examination
 def penguin():
   print("\n\n\n\n\n\n\n\n\n")
   write("Every year, so many penguins die from being choked by a plastic can holder.\n")
@@ -575,6 +586,7 @@ def penguin():
   input("Press Enter to continue...")
   the_final_choice()
 
+# seagull examination
 def seagull():
   print("\n\n\n\n\n\n\n\n\n")
   write("Every year, so many seagulls die from plastic bags stopping their air flow.\n")
@@ -583,6 +595,7 @@ def seagull():
   input("Press Enter to continue...")
   the_final_choice()
 
+#seal examination
 def seal():
   print("\n\n\n\n\n\n\n\n\n")
   write("Every year, so many seals die from consuming the remnants of plastic bottles.\n")
@@ -591,6 +604,7 @@ def seal():
   input("Press Enter to continue...")
   the_final_choice()
 
+# The final choice after the player examines any of the animals
 def the_final_choice():
   helping = input("\n\nAre you willing to help the world to get rid of unnecessary plastics?\n")
   if helping.strip().lower() == "yes":
