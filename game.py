@@ -207,23 +207,34 @@ class Quiz:
     self.prompt = prompt
     self.answer = answer
 
-  qs = ["How many pieces of plastic are in the Ocean?\nA) 4.25 trillion\nB) 6.5 trillion\nC) 5.25 trillion",
-  "How many sea animals die from plastic pollution?\nA) 1 million\nB) 100 thousand\nC) 10 million",
-  "How many sea turtles died last year from plastic pollution in the ocean?\nA) 100\nB) 1,000\nC) 10,000"]
+qs = ["How many pieces of plastic are in the Ocean?\nA) 4.25 trillion\nB) 6.5 trillion\nC) 5.25 trillion\n",
+"How many sea animals die from plastic pollution?\nA) 1 million\nB) 100 thousand\nC) 10 million\n",
+"How many sea turtles died last year from plastic pollution in the ocean?\nA) 100\nB) 1,000\nC) 10,000\n"]
 
-  questions = [
-    Quiz(qs[0], "c"),
-    Quiz(qs[1], "b"),
-    Quiz(qs[2], "b")
-  ]
+questions = [
+  Quiz(qs[0], "c"),
+  Quiz(qs[1], "b"),
+  Quiz(qs[2], "b")
+]
 
 def play_quiz(questions):
   score = 0
   for question in questions:
     answer = input(question.prompt)
-    if answer == question.answer:
+    if answer.strip().lower() == question.answer:
       score += 1
-  print(score)
+    print("\n")
+  
+  if score == 2 or 1 or 0:
+    write("YOU FAILED TO SOLVE MY RIDDLES THREE\n")
+    write("I GUESS THIS IS IT FOR YOU.")
+    sys.exit
+  elif score == 3:
+    clear()
+    print("\n\n\n\n\n\n\n\n\n\n\n\n")
+    write("YOU FAILED TO SOLVE MY RIDDLES THREE\n")
+    write("YOU GET TO SEE ANOTHER DAY.\nI HOPE YOU USE IT WELL.")
+    sys.exit
 
 
 def torch_plastic_fight():
