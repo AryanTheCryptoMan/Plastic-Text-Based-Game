@@ -8,4 +8,4 @@
   4. Right click on the zip file and click "Extract Here"
   5. Right click on RPG_game_new.py in the extracted folder and click "Run With Python"
 
-### Now Play The Gane And Have Fun
+### Now Play The Game And Have Fun
